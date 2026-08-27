@@ -43,9 +43,6 @@ jobs:
     - name: Generate Allure Report
       run: |
         allure generate allure-result --clean -o allure-report
-        
-    - name: List generated report  # проверим, что файлы есть
-      run: ls -la allure-report
 
     - name: Deploy Allure report to GitHub Pages # отправим отчёт на ветку гитхаб pages и запустим отчет аллюр
       uses: peaceiris/actions-gh-pages@v3
