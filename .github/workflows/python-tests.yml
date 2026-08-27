@@ -40,12 +40,6 @@ jobs:
         npm install -g allure-commandline --save-dev
         allure generate allure-results --clean -o allure-report
 
-    - name: Upload Allure report as artifact # сохраним отчёт (или можем скачать из вкладки Actions)
-      uses: actions/upload-artifact@v4
-      with:
-        name: allure-report
-        path: allure-report
-
     - name: Deploy Allure report to GitHub Pages # отправим отчёт на ветку гитхаб pages и запустим отчет аллюр
       uses: peaceiris/actions-gh-pages@v3
       with:
