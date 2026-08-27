@@ -28,7 +28,7 @@ jobs:
     - name: Set up Chrome
       uses: browser-actions/setup-chrome@v1
       with:
-      chrome-version: 'stable'
+        chrome-version: 'stable'
 
     - name: Run tests with Allure # запустим тесты
       run: |
